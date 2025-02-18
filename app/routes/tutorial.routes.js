@@ -7,18 +7,15 @@ module.exports = (app) => {
   // router.post("/", lecture.create);
 
   // Retrieve all lecture
-  router.get("/.netlify/functions/index", lecture.findAll);
+  router.get("/", lecture.findAll);
 
   // // Retrieve all published lecture
   // router.get("/published", lecture.findAllPublished);
 
   // // Retrieve a single Tutorial with id
-  router.get("/.netlify/functions/index/ranges", lecture.findOne);
-  router.get("/.netlify/functions/index/reports", lecture.findOneReports);
-  router.post(
-    "/.netlify/functions/index/reports-download",
-    lecture.downloadReports
-  );
+  router.get("/ranges", lecture.findOne);
+  router.get("/reports", lecture.findOneReports);
+  router.post("/reports-download", lecture.downloadReports);
 
   // // Update a Tutorial with id
   // router.put("/:id", lecture.update);

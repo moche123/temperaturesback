@@ -1,7 +1,9 @@
 const express = require("express");
 // const bodyParser = require("body-parser"); /* deprecated */
+
 const cors = require("cors");
 var serverless = require("serverless-http");
+var router = express.Router();
 
 const app = express();
 
@@ -24,7 +26,20 @@ app.use(
 app.get("/.netlify/functions/index", (req, res) => {
   res.json({ message: "Welcome to bezkoder application." });
 });
+// app.use("/.netlify/functions/index/api/lecture", router);
+// app.use("/.netlify/functions/index/api/lecture", router);
+// router.get("/.netlify/functions/index", lecture.findAll);
 
+// // Retrieve all published lecture
+// router.get("/published", lecture.findAllPublished);
+
+// // Retrieve a single Tutorial with id
+// router.get("/.netlify/functions/index/ranges", lecture.findOne);
+// router.get("/.netlify/functions/index/reports", lecture.findOneReports);
+// router.post(
+//   "/.netlify/functions/index/reports-download",
+//   lecture.downloadReports
+// );
 require("../app/routes/tutorial.routes.js")(app);
 
 // set port, listen for requests
