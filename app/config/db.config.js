@@ -1,6 +1,6 @@
 module.exports = {
-  HOST: "127.0.0.1",
-  USER: "root",
-  // PASSWORD: "password",
-  DB: "lecture"
+  HOST: "sql5.freesqldatabase.com",
+  USER: "sql5763296",
+  PASSWORD: "NwfyIEDDQ7",
+  DB: "sql5763296",
 };
